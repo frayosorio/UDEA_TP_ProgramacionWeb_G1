@@ -3,22 +3,22 @@
 <head>
     <title>Juego de Cartas</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/juego.js"></script>
     <script src="js/carta.js"></script>
     <link href="estilos/estilos.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body ng-controller="ControlJuegoCartas">
-    <div id="Titulo">Juego de Cartas</div>
+<body ng-controller="ControladorJuegoCartas">
+    <div id="titulo">Juego de Cartas</div>
     <div class="botones">
         <a id="btnRepartir" href="#" ng-click="repartir()" class="boton">Repartir</a>
-        <a id="btnVerificar" href="#" ng-click="chequear()" class="boton">Chequear</a>
+        <a id="btnVerificar" href="#" ng-click="verificar()" class="boton">Chequear</a>
     </div>
 
-    <div id="Mesa">
+    <div id="mesa">
         <ul>
             <li ng-repeat="carta in cartas" class="carta">
-                <img src="{{carta.obtenerImagen()}}" title="{{carta.obtenerNombre()}} {{carta.obtenerPinta()}}" />
+                <img src="{{carta.getImagen()}}" title="{{carta.getNombre()}} {{carta.getPinta()}}" />
             </li>
         </ul>
         <table>
